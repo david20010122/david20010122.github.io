@@ -1,0 +1,127 @@
+body{
+	font-size: 16px;
+	font-family: 'Roboto',sans-serif;
+	font-weight: 300; 
+	}
+	*, *::before, *::after{
+	box-sizing: border-box;
+	margin:0;
+	padding:0;
+	}
+	img{
+	max-width: 100%;
+	}
+
+/*--layout--*/
+	body{
+		display: grid;
+		grid-template-areas:
+			"fejlec"
+			"kontent"
+			"lablec"
+		;
+		grid-template-rows: max-content 1fr max-content
+		min-height: 100vh;
+	}
+	header{
+		background-color: grey;
+		grid-area: fejlec;
+	}
+	main{
+		background-color: grey;
+		grid-area: kontent;
+		min-height: 100vh;
+	}
+	footer{
+		background-color: grey;
+		grid-area: lablec;
+	}
+/*--layout_end--*/
+/*--Általanos--*/
+		a{
+			text-decoration: none;
+			color: #000000;
+		}
+/*--Általanos_end--*/
+/*--azonos_header--*/
+	header{
+		line-height: 2rem;
+		font-size: .95rem;
+		text-align: center;
+		padding:.75rem 1rem;
+	}
+
+		.header_kozep{
+		font-size: 2rem;
+		font-weight: 400;
+		}
+		header .header_menu{
+			margin: 0 1rem;
+		}
+		header .header_menu:hover{
+	color: white;
+	text-decoration: underline;
+		}	
+/*--azonos_header_end--*/
+/*--azonos_footer--*/
+	footer{
+	background-color: grey;
+	line-height: 3rem;
+	}
+	footer a:hover{
+	text-decoration: underline;
+	}
+	#footer_teteje{
+	padding-left: 2rem;
+	border-bottom: 1px solid black;
+	}
+	#footer_alja{
+	padding-left: 2rem;
+	padding-right: 2rem;
+	text-align: center;
+
+	}
+/*--azonos_footer_end--*/
+/*--kep_racs--*/
+	.kepek_flex_racs{
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: 1rem;
+	}
+	.kepek_flex_racs .kep_kartya{
+		margin-right: 1rem;
+		margin-bottom: 1rem;
+		flex-grow: 1;
+	}
+	.kep_kartya .kep{
+			height: 20rem;			
+			text-align: center;
+	}
+	.kep_kartya .kep img{
+		height: 100%;
+		width: 100%;
+		object-fit: contain;
+	}
+	.kep_kartya .kep img:hover{
+		-webkit-box-shadow: 0 2px 12px 0 rgba(0,0,0,.3);
+			-moz-box-shadow:	0 2px 12px 0 rgba(0,0,0,.3);
+			box-shadow:0 2px 12px 0 rgba(0,0,0,.3);
+	}
+	.kep_kartya p{
+		font-size: 1rem;
+		padding-top: .4rem;
+	}
+	.kep_kartya span{
+		font-size: .68rem;
+	}
+	.kep_kartya .main_szoveg{
+		font-size: 1.25rem;
+	}
+
+/*--kep_racs_end--*/
+/*--main_szoveg--*/
+	.main_szoveg{
+		font-size: 1rem;
+	}
+	
+/*--main_szoveg_end--*/
